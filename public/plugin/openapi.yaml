@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: Clock Plugin
+  description: A plugin that allows chatGPT to know the date and time.
+  version: 'v1'
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/time:
+    get:
+      operationId: getTime
+      summary: Get current date and time
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getTimeResponse'
+components:
+  schemas:
+    getTimeResponse:
+      type: object
+      properties:
+        currentTime:
+          type: string
+          description: The current date and time.
+        currentDate:
+          type: string
+          description: The current date.
+        currentTimeZone:
+          type: string
+          description: The current time zone.

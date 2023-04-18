@@ -1,2 +1,2 @@
-# chatgpt-plugin-python
-A sample plugin for ChatGPT written in Python
+# plugin-chatgpt-python
+A toy example showing how to build ChatGPT plugin in python
